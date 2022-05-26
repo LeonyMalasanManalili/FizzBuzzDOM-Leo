@@ -1,0 +1,51 @@
+/* GENERAL */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #093A4B;
+}
+
+/* Utilities */
+
+h1{
+    text-align: center;
+    color: #FFF;
+    padding: 40px 0;
+}
+
+#big{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    margin: 0 auto;
+    max-width: 920px;
+}
+
+.square{
+    height: 150px;
+    width: 150px;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1588B1;
+}
+
+.square-3{
+    background-color: #03D5A1;
+}
+
+.square-5{
+    background-color: #FED068;
+}   
+
+.square-15{
+    background-color: #EF466E; 
+}

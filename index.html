@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h1>FizzBuzzDOM</h1>
+
+    <div id="big">
+
+    </div>
+    
+</body>
+
+    <script>
+
+        //Creazione variabile del div contenitore in Js.
+        let big = document.getElementById("big")
+
+
+        //Ciclo for per la creazione dei div interni
+        for(i=1; i<101; i++){
+
+            // let square = document.getElementById("big").appendChild(document.createElement("div")) -- forma contratta.
+
+            //creazione variabile dei div interni
+            let square = document.createElement("div")
+
+            //Aggiungo un nodo al div contenitore("big") con appendChild(square) la variabile appena creata.
+            big.appendChild(square)
+
+            //assegnazione all'elemento la classe "square" presente nel css
+            square.className="square"
+            
+            //essendo la variabile square === div.square allora stampo all'interno una stringa vuota e il valore della "i" che sta ciclando.
+            square.innerHTML=""+i
+
+
+            //Condizioni
+            //Se la "i" ha un valore divisibile per 3 con il resto di 0 allora esegui{} -- lo stesso vale per le condizioni successive.
+            if(i % 3 == 0){
+                square.innerHTML="Fizz"
+                square.classList.add("square-3")
+            }
+            if(i % 5 == 0){
+                square.innerHTML="Buzz"
+                square.classList.add("square-5")
+            }
+            if(i % 15 == 0){
+                square.innerHTML="Buzz"
+                square.classList.add("square-15")
+            }
+        }
+
+    </script>
+
+</html>
